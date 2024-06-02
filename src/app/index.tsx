@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function RootApp() {
   const [nameApp, setNameApp] = useState('');
 
   useEffect(() => {
@@ -13,7 +13,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text>{nameApp}</Text>
+      {nameApp && <Text>{nameApp}</Text>}
 
       <StatusBar style="auto" />
     </View>
