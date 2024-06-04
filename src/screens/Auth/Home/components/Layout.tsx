@@ -5,8 +5,6 @@ import TypeWriter from 'react-native-typewriter';
 
 import { Colors } from '@/configs';
 
-import { LoginButtons } from './components';
-
 const TEXTS = [
   {
     text: 'ChatGPT',
@@ -29,7 +27,7 @@ enum TextType {
   BACK = -1,
 }
 
-export default function SignIn() {
+export function Layout({ children }: { children: React.ReactNode }) {
   const [type, setType] = useState(TextType.GO);
   const [currentText, setCurrentText] = useState(0);
   const textColor = TEXTS[currentText].color;
@@ -69,7 +67,8 @@ export default function SignIn() {
         </Text>
         <Box h={30} w={30} bg={textColor} borderRadius={'$full'} />
       </Box>
-      <LoginButtons />
+
+      {children}
     </Center>
   );
 }

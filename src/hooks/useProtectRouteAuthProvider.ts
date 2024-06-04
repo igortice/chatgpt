@@ -3,16 +3,16 @@ import { useEffect } from 'react';
 
 import { Routes } from '@/configs';
 
-const routerHome = Routes.homeApp;
-const routerSignIn = Routes.signIn;
+const pathHome = Routes.app.home.path;
+const pathAuthHome = Routes.auth.home.path;
 
 export function useProtectRouteAuthProvider() {
-  const { userIsLoggedIn } = { userIsLoggedIn: false };
+  const { userIsLoggedIn } = { userIsLoggedIn: true };
 
   const router = useRouter();
 
   useEffect(() => {
-    const replaceTo = userIsLoggedIn ? routerHome : routerSignIn;
+    const replaceTo = userIsLoggedIn ? pathHome : pathAuthHome;
 
     router.replace(replaceTo);
   }, [userIsLoggedIn, router]);

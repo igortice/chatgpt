@@ -6,8 +6,9 @@ import {
   Button,
   ButtonText,
 } from '@gluestack-ui/themed';
+import { Link } from 'expo-router';
 
-import { Colors } from '@/configs';
+import { Colors, Routes } from '@/configs';
 
 export function LoginButtons() {
   const handleAppleLogin = () => {
@@ -16,10 +17,6 @@ export function LoginButtons() {
 
   const handleGoogleLogin = () => {
     console.log('Google login');
-  };
-
-  const handleEmailLogin = () => {
-    console.log('Email login');
   };
 
   const handleLogin = () => {
@@ -61,19 +58,20 @@ export function LoginButtons() {
         </ActionsheetItem>
 
         <ActionsheetItem my={-7}>
-          <Button
-            $active-opacity={0.6}
-            paddingVertical={5}
-            height={50}
-            w="$full"
-            rounded={12}
-            bg={Colors.dark}
-            onPress={handleEmailLogin}>
-            <Zocial name="email" size={18} color={Colors.white} />
-            <ButtonText ml="$2" size="sm" fontWeight={500} color={Colors.white}>
-              Sign up with Email
-            </ButtonText>
-          </Button>
+          <Link href={Routes.auth.signInEmail.path} asChild>
+            <Button
+              $active-opacity={0.6}
+              paddingVertical={5}
+              height={50}
+              w="$full"
+              rounded={12}
+              bg={Colors.dark}>
+              <Zocial name="email" size={18} color={Colors.white} />
+              <ButtonText ml="$2" size="sm" fontWeight={500} color={Colors.white}>
+                Sign up with Email
+              </ButtonText>
+            </Button>
+          </Link>
         </ActionsheetItem>
 
         <ActionsheetItem mt={-7}>
