@@ -1,11 +1,11 @@
 import { Stack } from 'expo-router';
 
-import { Routes } from '@/configs';
+const drawerName = '(drawer)';
 
-export default function AuthLayout() {
+export default function AppLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={Routes.app.home.name} />
+      <Stack.Screen name={drawerName} />
     </Stack>
   );
 }

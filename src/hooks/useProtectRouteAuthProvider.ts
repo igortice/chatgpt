@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 import { Routes } from '@/configs';
 
-const pathHome = Routes.app.home.path;
+const pathAppHome = Routes.app.drawer.chat.path;
 const pathAuthHome = Routes.auth.home.path;
 
 export function useProtectRouteAuthProvider() {
@@ -12,7 +12,7 @@ export function useProtectRouteAuthProvider() {
   const router = useRouter();
 
   useEffect(() => {
-    const replaceTo = userIsLoggedIn ? pathHome : pathAuthHome;
+    const replaceTo = userIsLoggedIn ? pathAppHome : pathAuthHome;
 
     router.replace(replaceTo);
   }, [userIsLoggedIn, router]);

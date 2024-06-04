@@ -1,8 +1,14 @@
 export default {
   app: {
-    home: {
-      name: 'home',
-      path: '/(app)/home',
+    drawer: {
+      chat: {
+        name: 'chat',
+        path: '/(app)/(drawer)/chat',
+      },
+      dalle: {
+        name: 'dalle',
+        path: '/(app)/(drawer)/dalle',
+      },
     },
   },
   auth: {

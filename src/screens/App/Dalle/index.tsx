@@ -1,9 +1,9 @@
 import { Center, Text } from '@gluestack-ui/themed';
 
-export default function AppHome() {
+export default function AppDalle() {
   return (
     <Center h="$full">
-      <Text>AppHome</Text>
+      <Text>AppDalle</Text>
     </Center>
   );
 }

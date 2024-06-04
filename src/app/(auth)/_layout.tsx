@@ -4,7 +4,11 @@ import { router, Stack } from 'expo-router';
 
 import { Routes } from '@/configs';
 
-const closeModalSignInEmailButton = () => {
+const homeName = Routes.auth.home.name;
+const signInEmailName = Routes.auth.signInEmail.name;
+const signInEmailTitle = Routes.auth.signInEmail.title;
+
+const headerRightModal = () => {
   return (
     <Button variant="link" $active-opacity={0.6} onPress={() => router.back()}>
       <Ionicons name="close" size={24} />
@@ -15,15 +19,15 @@ const closeModalSignInEmailButton = () => {
 export default function AuthLayout() {
   return (
     <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name={Routes.auth.home.name} />
+      <Stack.Screen name={homeName} />
 
       <Stack.Screen
-        name={Routes.auth.signInEmail.name}
+        name={signInEmailName}
         options={{
           presentation: 'modal',
           headerShown: true,
-          title: Routes.auth.signInEmail.title,
-          headerRight: closeModalSignInEmailButton,
+          title: signInEmailTitle,
+          headerRight: headerRightModal,
         }}
       />
     </Stack>
