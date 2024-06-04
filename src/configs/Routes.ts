@@ -12,6 +12,7 @@ export default {
     },
     signInEmail: {
       name: 'sign-in-email',
+      title: 'Sign in with email',
       path: '/(auth)/sign-in-email',
     },
   },
