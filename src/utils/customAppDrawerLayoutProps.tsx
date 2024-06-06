@@ -20,6 +20,7 @@ import { Link, useNavigation } from 'expo-router';
 import { ScreenProps } from 'expo-router/build/useScreens';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
+import { StyledBlurView } from '@/components';
 import { Colors, Routes } from '@/configs';
 
 const CustomHeaderLeft = () => {
@@ -54,12 +55,13 @@ const CustomDrawerContent = (props: any) => {
         <DrawerItemList {...props} />
       </DrawerContentScrollView>
 
-      <Box
+      <StyledBlurView
+        intensity={50}
+        tint="extraLight"
         pt={12}
         px={12}
         pb={bottom}
         position="absolute"
-        backgroundColor={`${Colors.input}20`}
         bottom={0}
         left={0}
         right={0}>
@@ -89,7 +91,7 @@ const CustomDrawerContent = (props: any) => {
             </Link>
           </Box>
         </HStack>
-      </Box>
+      </StyledBlurView>
     </Box>
   );
 };
