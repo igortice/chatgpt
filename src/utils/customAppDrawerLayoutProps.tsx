@@ -56,7 +56,7 @@ const CustomDrawerContent = (props: any) => {
       </DrawerContentScrollView>
 
       <StyledBlurView
-        intensity={50}
+        intensity={90}
         tint="extraLight"
         pt={12}
         px={12}
