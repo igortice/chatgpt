@@ -10,6 +10,11 @@ export default {
         path: '/(app)/(drawer)/dalle',
       },
     },
+    config: {
+      name: 'config',
+      title: 'Config',
+      path: '/(app)/config',
+    },
   },
   auth: {
     home: {

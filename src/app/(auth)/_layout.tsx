@@ -1,20 +1,11 @@
-import { Ionicons } from '@expo/vector-icons';
-import { Button } from '@gluestack-ui/themed';
-import { router, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 
 import { Routes } from '@/configs';
+import { optionsStackScreenModalHeaderClose } from '@/utils';
 
 const homeName = Routes.auth.home.name;
 const signInEmailName = Routes.auth.signInEmail.name;
 const signInEmailTitle = Routes.auth.signInEmail.title;
-
-const headerRightModal = () => {
-  return (
-    <Button variant="link" $active-opacity={0.6} onPress={() => router.back()}>
-      <Ionicons name="close" size={24} />
-    </Button>
-  );
-};
 
 export default function AuthLayout() {
   return (
@@ -24,10 +15,7 @@ export default function AuthLayout() {
       <Stack.Screen
         name={signInEmailName}
         options={{
-          presentation: 'modal',
-          headerShown: true,
-          title: signInEmailTitle,
-          headerRight: headerRightModal,
+          ...(optionsStackScreenModalHeaderClose({ title: signInEmailTitle }) as any),
         }}
       />
     </Stack>
