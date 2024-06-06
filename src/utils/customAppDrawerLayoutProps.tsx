@@ -17,6 +17,7 @@ import {
 import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { DrawerActions } from '@react-navigation/native';
 import { Link, useNavigation } from 'expo-router';
+import { ScreenProps } from 'expo-router/build/useScreens';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { Colors, Routes } from '@/configs';
@@ -109,4 +110,4 @@ const drawerScreenOptions = {
 export const customAppDrawerLayoutProps = {
   drawerContent: CustomDrawerContent,
   screenOptions: { ...drawerScreenOptions } as any,
-} as any;
+} as ScreenProps;
