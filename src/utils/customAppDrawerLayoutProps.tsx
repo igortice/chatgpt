@@ -98,7 +98,7 @@ const CustomDrawerContent = (props: any) => {
 
 const drawerScreenOptions = {
   drawerStyle: { width: '85%' },
-  headerStyle: { backgroundColor: Colors.light },
+  headerStyle: { backgroundColor: Colors.transparent },
   headerShadowVisible: false,
   headerRightContainerStyle: { paddingRight: 12 },
   drawerActiveBackgroundColor: Colors.selected,

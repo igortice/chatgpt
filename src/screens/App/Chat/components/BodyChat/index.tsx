@@ -2,7 +2,6 @@ import { Box, KeyboardAvoidingView } from '@gluestack-ui/themed';
 import { useState } from 'react';
 import { Platform } from 'react-native';
 
-import { Colors } from '@/configs';
 import { MOCK_MESSAGES_CHAT } from '@/mocks';
 
 import { ERole, TMessages } from '../../utils/types';
@@ -25,18 +24,14 @@ export const BodyChat = () => {
   };
 
   return (
-    <Box h="$full" w="$full" bg={Colors.light}>
+    <Box h="$full" w="$full">
       <KeyboardAvoidingView
         w="100%"
-        h="100%"
-        left={0}
         bottom={0}
         position="absolute"
         keyboardVerticalOffset={70}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <Box flex={1} p={12}>
-          <MessagesChat messages={messages} />
-        </Box>
+        <MessagesChat messages={messages} />
 
         <InputChat onSend={handleOnSend} />
       </KeyboardAvoidingView>

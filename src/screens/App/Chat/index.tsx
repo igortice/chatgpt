@@ -1,13 +1,9 @@
-import { Center } from '@gluestack-ui/themed';
-
-import { BodyChat, CustomDrawerScreenHeader } from './components';
+import { BodyChat, Layout } from './components';
 
 export default function AppChat() {
   return (
-    <Center h="$full">
-      <CustomDrawerScreenHeader />
-
+    <Layout>
       <BodyChat />
-    </Center>
+    </Layout>
   );
 }
