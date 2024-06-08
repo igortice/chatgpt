@@ -2,14 +2,12 @@ import { Box, KeyboardAvoidingView } from '@gluestack-ui/themed';
 import { useState } from 'react';
 import { Platform } from 'react-native';
 
-import { MOCK_MESSAGES_CHAT } from '@/mocks';
-
 import { ERole, TMessages } from '../../utils/types';
 import { InputChat } from '../InputChat';
 import { MessagesChat } from '../MessagesChat';
 
 export const BodyChat = () => {
-  const [messages, setMessages] = useState<TMessages>(MOCK_MESSAGES_CHAT);
+  const [messages, setMessages] = useState<TMessages>([]);
 
   const handleOnSend = (message: string) => {
     if (message.trim() === '') return;

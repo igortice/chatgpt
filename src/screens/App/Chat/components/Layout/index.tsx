@@ -10,7 +10,7 @@ interface ILayoutProps {
 
 export function Layout({ children }: ILayoutProps) {
   return (
-    <Center h="$full" bg={Colors.light}>
+    <Center h="$full" w="$full" bg={Colors.light}>
       <CustomDrawerScreenHeader />
 
       {children}
