@@ -1,2 +1,2 @@
-export { BodyMessage } from './BodyMessage';
+export { BodyChat } from './BodyChat';
 export { CustomDrawerScreenHeader } from './CustomDrawerScreenHeader';
