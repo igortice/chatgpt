@@ -25,6 +25,7 @@ export const BodyChat = () => {
     <Box h="$full" w="$full">
       <KeyboardAvoidingView
         w="100%"
+        h="100%"
         bottom={0}
         position="absolute"
         keyboardVerticalOffset={70}

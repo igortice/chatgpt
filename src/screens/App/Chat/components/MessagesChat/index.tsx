@@ -62,23 +62,21 @@ export const MessagesChat = ({ messages }: TMessagesChatProps) => {
   };
 
   return (
-    <Box flex={1}>
-      <Box h="$full" w="$full" bg={Colors.light}>
-        <Box flex={1} p={12}>
-          {messages?.length > 0 && (
-            <FlashList
-              ref={scrollViewRef}
-              data={messages}
-              renderItem={({ item }) => (
-                <LayoutFlatListItem item={item} lastItem={messages[messages.length - 1] === item} />
-              )}
-              estimatedItemSize={400}
-              keyboardDismissMode="on-drag"
-              showsVerticalScrollIndicator={false}
-              onContentSizeChange={handleOnContentSizeChange}
-            />
-          )}
-        </Box>
+    <Box flex={1} h="$full" w="$full" bg={Colors.light}>
+      <Box flex={1} p={12}>
+        {messages?.length > 0 && (
+          <FlashList
+            ref={scrollViewRef}
+            data={messages}
+            renderItem={({ item }) => (
+              <LayoutFlatListItem item={item} lastItem={messages[messages.length - 1] === item} />
+            )}
+            estimatedItemSize={400}
+            keyboardDismissMode="on-drag"
+            showsVerticalScrollIndicator={false}
+            onContentSizeChange={handleOnContentSizeChange}
+          />
+        )}
       </Box>
     </Box>
   );

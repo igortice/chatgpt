@@ -16,5 +16,6 @@ export const optionsStackScreenModalHeaderClose = ({ title }: { title: string })
     headerShown: true,
     title,
     headerRight: headerRightModal,
+    headerShadowVisible: false,
   };
 };
