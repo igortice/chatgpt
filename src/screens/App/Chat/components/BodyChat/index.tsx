@@ -5,6 +5,7 @@ import { Platform } from 'react-native';
 import { ERole, TMessages } from '../../utils/types';
 import { InputChat } from '../InputChat';
 import { MessagesChat } from '../MessagesChat';
+import { MessagesIdea } from '../MessagesIdea';
 
 export const BodyChat = () => {
   const [messages, setMessages] = useState<TMessages>([]);
@@ -23,15 +24,14 @@ export const BodyChat = () => {
 
   return (
     <Box h="$full" w="$full">
+      {(messages.length > 0 && <MessagesChat messages={messages} />) || <MessagesIdea />}
       <KeyboardAvoidingView
         w="100%"
-        h="100%"
         bottom={0}
+        left={0}
         position="absolute"
         keyboardVerticalOffset={70}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
-        <MessagesChat messages={messages} />
-
         <InputChat onSend={handleOnSend} />
       </KeyboardAvoidingView>
     </Box>

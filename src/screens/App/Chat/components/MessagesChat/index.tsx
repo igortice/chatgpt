@@ -62,7 +62,7 @@ export const MessagesChat = ({ messages }: TMessagesChatProps) => {
   };
 
   return (
-    <Box flex={1} h="$full" w="$full" bg={Colors.light}>
+    <Box h="90%" w="$full" bg={Colors.light}>
       <Box flex={1} p={12}>
         {messages?.length > 0 && (
           <FlashList
